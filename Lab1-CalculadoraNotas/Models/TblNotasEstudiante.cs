@@ -22,5 +22,9 @@ namespace Lab1_CalculadoraNotas.Models
         public Nullable<double> Parcial1 { get; set; }
         public Nullable<double> Parcial2 { get; set; }
         public Nullable<double> Parcial3 { get; set; }
+        public Nullable<double> Periodo1 { get; set; }
+        public Nullable<double> Periodo2 { get; set; }
+        public Nullable<double> Periodo3 { get; set; }
+        public Nullable<double> NotaFianl { get; set; }
     }
 }

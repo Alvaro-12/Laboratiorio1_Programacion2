@@ -12,6 +12,10 @@
     <Property Name="Parcial1" Type="float" />
     <Property Name="Parcial2" Type="float" />
     <Property Name="Parcial3" Type="float" />
+    <Property Name="Periodo1" Type="float" />
+    <Property Name="Periodo2" Type="float" />
+    <Property Name="Periodo3" Type="float" />
+    <Property Name="NotaFianl" Type="float" />
   </EntityType>
   <EntityContainer Name="EstudianteModelStoreContainer">
     <EntitySet Name="TblNotasEstudiante" EntityType="Self.TblNotasEstudiante" Schema="dbo" store:Type="Tables" />

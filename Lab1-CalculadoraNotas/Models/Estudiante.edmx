@@ -17,6 +17,10 @@
           <Property Name="Parcial1" Type="float" />
           <Property Name="Parcial2" Type="float" />
           <Property Name="Parcial3" Type="float" />
+          <Property Name="Periodo1" Type="float" />
+          <Property Name="Periodo2" Type="float" />
+          <Property Name="Periodo3" Type="float" />
+          <Property Name="NotaFianl" Type="float" />
         </EntityType>
         <EntityContainer Name="EstudianteModelStoreContainer">
           <EntitySet Name="TblNotasEstudiante" EntityType="Self.TblNotasEstudiante" Schema="dbo" store:Type="Tables" />
@@ -38,8 +42,12 @@
           <Property Name="Parcial1" Type="Double" />
           <Property Name="Parcial2" Type="Double" />
           <Property Name="Parcial3" Type="Double" />
+          <Property Name="Periodo1" Type="Double" />
+          <Property Name="Periodo2" Type="Double" />
+          <Property Name="Periodo3" Type="Double" />
+          <Property Name="NotaFianl" Type="Double" />
         </EntityType>
-        <EntityContainer Name="EstudianteEntities4" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EstudianteEntities5" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblNotasEstudiante" EntityType="Self.TblNotasEstudiante" />
         </EntityContainer>
       </Schema>
@@ -47,7 +55,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EstudianteModelStoreContainer" CdmEntityContainer="EstudianteEntities4">
+        <EntityContainerMapping StorageEntityContainer="EstudianteModelStoreContainer" CdmEntityContainer="EstudianteEntities5">
           <EntitySetMapping Name="TblNotasEstudiante">
             <EntityTypeMapping TypeName="EstudianteModel.TblNotasEstudiante">
               <MappingFragment StoreEntitySet="TblNotasEstudiante">
@@ -59,6 +67,10 @@
                 <ScalarProperty Name="Parcial1" ColumnName="Parcial1" />
                 <ScalarProperty Name="Parcial2" ColumnName="Parcial2" />
                 <ScalarProperty Name="Parcial3" ColumnName="Parcial3" />
+                <ScalarProperty Name="Periodo1" ColumnName="Periodo1" />
+                <ScalarProperty Name="Periodo2" ColumnName="Periodo2" />
+                <ScalarProperty Name="Periodo3" ColumnName="Periodo3" />
+                <ScalarProperty Name="NotaFianl" ColumnName="NotaFianl" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

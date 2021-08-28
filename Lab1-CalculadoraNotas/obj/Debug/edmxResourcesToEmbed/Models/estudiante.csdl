@@ -12,8 +12,12 @@
     <Property Name="Parcial1" Type="Double" />
     <Property Name="Parcial2" Type="Double" />
     <Property Name="Parcial3" Type="Double" />
+    <Property Name="Periodo1" Type="Double" />
+    <Property Name="Periodo2" Type="Double" />
+    <Property Name="Periodo3" Type="Double" />
+    <Property Name="NotaFianl" Type="Double" />
   </EntityType>
-  <EntityContainer Name="EstudianteEntities4" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="EstudianteEntities5" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TblNotasEstudiante" EntityType="Self.TblNotasEstudiante" />
   </EntityContainer>
 </Schema>

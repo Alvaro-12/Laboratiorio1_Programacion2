@@ -13,10 +13,10 @@ namespace Lab1_CalculadoraNotas.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EstudianteEntities4 : DbContext
+    public partial class EstudianteEntities5 : DbContext
     {
-        public EstudianteEntities4()
-            : base("name=EstudianteEntities4")
+        public EstudianteEntities5()
+            : base("name=EstudianteEntities5")
         {
         }
     
