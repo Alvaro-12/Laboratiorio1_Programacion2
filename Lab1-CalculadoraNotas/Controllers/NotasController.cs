@@ -13,27 +13,27 @@ namespace Lab1_CalculadoraNotas.Controllers
         public ActionResult Index()
         {
 
-            
             return View();
         }
-        public ActionResult CalcularN(string nombre, float lab1, float lab2, float lab3, float parcial1
-                                     , float parcial2, float parcial3)
+
+        [HttpPost]
+        public ActionResult CalcularN(string Nombre, double lab1, double lab2,double lab3, double Par1, double par2, double par3)
         {
             using (EstudianteEntities5 datos = new EstudianteEntities5())
             {
                 TblNotasEstudiante estudianteN = new TblNotasEstudiante();
 
-                estudianteN.Nombre = nombre;
+                estudianteN.Nombre = Nombre;
                 estudianteN.Lab1 = lab1;
                 estudianteN.Lab2 = lab2;
                 estudianteN.Lab3 = lab3;
-                estudianteN.Parcial1 = parcial1;
-                estudianteN.Parcial2 = parcial2;
-                estudianteN.Parcial3 = parcial3;
+                estudianteN.Parcial1 = Par1;
+                estudianteN.Parcial2 = par2;
+                estudianteN.Parcial3 = par3;
 
-               double periodo1 = (lab1 * 0.4)+(parcial1 * 0.6);
-                double periodo2 = (lab2 * 0.4) + (parcial2 * 0.6);
-                double periodo3 = (lab3 * 0.4) + (parcial3 * 0.6);
+                double periodo1 = (lab1 * 0.4) + (Par1 * 0.6);
+                double periodo2 = (lab2 * 0.4) + (par2 * 0.6);
+                double periodo3 = (lab3 * 0.4) + (par3 * 0.6);
 
                 estudianteN.Periodo1 = periodo1;
                 estudianteN.Periodo2 = periodo2;
@@ -44,8 +44,7 @@ namespace Lab1_CalculadoraNotas.Controllers
                 datos.SaveChanges();
 
             }
-
-                return Redirect("/Notas/Resultado/");
+                return Redirect("/Notas/Resultado");
         }
 
         public ActionResult Resultado()
@@ -54,15 +53,20 @@ namespace Lab1_CalculadoraNotas.Controllers
             {
                 TblNotasEstudiante lista = new TblNotasEstudiante();
 
-                var NOTAS = notas.Set<TblNotasEstudiante>().OrderByDescending(t => t.Id).FirstOrDefault();
-                return View("Resultado");
+                var resultado = notas.Set<TblNotasEstudiante>().OrderByDescending(t => t.Id).FirstOrDefault();
+               
+                return View(resultado);
             }
                 
         }
 
         public ActionResult Registro()
         {
-            return View();
+            using (EstudianteEntities5 nt = new EstudianteEntities5())
+            {
+                var Registro = nt.TblNotasEstudiante.ToList();
+                return View(Registro);
+            }
         }
     }
 }

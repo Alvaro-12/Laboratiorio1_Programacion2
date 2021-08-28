@@ -10,14 +10,15 @@ namespace Lab1_CalculadoraNotas.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+           
+            return Redirect("/Notas/Index");
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return Redirect("/Notas/Registro");
         }
 
         public ActionResult Contact()
